@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:doctorrating/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'TiruHakim',
+      theme:ThemeData(
+        primarySwatch:Colors.blue
+      ), 
+      home: HomeScreen()
     );
   }
 }
