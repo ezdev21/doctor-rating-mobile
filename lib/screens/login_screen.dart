@@ -26,7 +26,13 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Form(
+      backgroundColor: Colors.grey[100],
+      appBar:AppBar(
+        title:Text('welcome TiruHakim'),
+        centerTitle: true,
+        backgroundColor: Colors.blue[700],
+      ),
+      body: Form(
       key: _formKey,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -46,6 +52,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 labelText: 'email',
                 filled: true,
                 fillColor: Colors.white),
+                focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.white),
+                borderRadius: BorderRadius.circular(25.7),
+                ),
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(25.7),
+                ),
           ),
           TextFormField(
             controller: _passwordcontroller,
