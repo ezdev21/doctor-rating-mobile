@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:doctorrating/screens/home_screen.dart';
-
+import 'package:provider/provider.dart';
+import 'package:doctorrating/services/auth.dart';
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers:[
+     ChangeNotifierProvider(create: (context)=>Auth()),
+     Provider(create: (context)=>)
+    ],
+    child:MyApp()
+  )
+  );
 }
 
 class MyApp extends StatelessWidget {
